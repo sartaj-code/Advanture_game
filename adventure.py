@@ -67,9 +67,6 @@ def cave(item, option,name):
     field(item, option,name)
 
 
-
-
-
 def house(item, option,name):
 
     print_pause("\n" +name + " You approach the door of the house.")
