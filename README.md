@@ -1,7 +1,15 @@
-# Advanture_game
+# Adventure_game
+
+## Introduction
+
 This is a simple text based choose your own adventure game developed for the Udacity Intro to Programming Nanodegree. The game tells a simple story of a town terrorized by a vampire leaving in a nearby castle. You play the hero tasked to rid the town of this menace.
-# Requirements
+
+## Requirements
+
 This script requires Python 3 or greater. It is not compatible with Python 2.7.
-# Steps to Play
+
+## Steps to Play
+
 To run the script, from a Unix like terminal, type either:
-    :--> python3 advanture.py
+- `python3 adventure_game.py`
+- `./adventure_ga
