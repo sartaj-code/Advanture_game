@@ -11,5 +11,5 @@ This script requires Python 3 or greater. It is not compatible with Python 2.7.
 ## Steps to Play
 
 To run the script, from a Unix like terminal, type either:
-- `python3 adventure_game.py`
-- `./adventure_ga
+- `python3 adventure.py`
+
