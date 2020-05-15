@@ -1,8 +1,9 @@
 import time
 import random
 
-name = input("what is your good name?\t")
+name = input("what is your good name?\n")
 time.sleep(1)
+
 
 def print_pause(msg_to_print):
 
@@ -11,8 +12,8 @@ def print_pause(msg_to_print):
     time.sleep(2)
 
 
-def intro(item, option,name):
-    print("Welcome to the game " + name + "!")
+def intro(item, option, name):
+    print_pause("Welcome to the game " + name + "!")
     print_pause(name + " You find yourself standing in an open field, filled "
 
                 "with grass and yellow wildflowers.\n")
@@ -30,7 +31,7 @@ def intro(item, option,name):
                 "effective) dagger.\n")
 
 
-def cave(item, option,name):
+def cave(item, option, name):
 
     if "sward" in item:
 
@@ -64,12 +65,12 @@ def cave(item, option,name):
 
         item.append("sward")
 
-    field(item, option,name)
+    field(item, option, name)
 
 
-def house(item, option,name):
+def house(item, option, name):
 
-    print_pause("\n" +name + " You approach the door of the house.")
+    print_pause("\n" + name + " You approach the door of the house.")
 
     print_pause("\nYou are about to knock when the door "
 
@@ -87,7 +88,8 @@ def house(item, option,name):
 
     while True:
 
-        choice2 = input(name + " Would you like to (1) fight or (2) run away?\n")
+        choice2 = input(name + " Would you like to (1) fight or (2) run away?"
+                        "\n")
 
         if choice2 == "1":
 
@@ -116,7 +118,6 @@ def house(item, option,name):
                 print_pause("\nYou do your best...")
 
                 print_pause("but your dagger is no match for the "
-
                             + option + ".")
 
                 print_pause("\nYou have been defeated!\n")
@@ -133,12 +134,12 @@ def house(item, option,name):
 
                         "followed.\n")
 
-            field(item, option,name)
+            field(item, option, name)
 
             break
 
 
-def field(item, option,name):
+def field(item, option, name):
     print_pause(name + " Press 1 to knock on the door of the house.")
 
     print_pause(name + " Press 2 to peer into the cave.")
@@ -151,31 +152,31 @@ def field(item, option,name):
 
         if choice1 == "1":
 
-            house(item, option,name)
+            house(item, option, name)
 
             break
 
         elif choice1 == "2":
 
-            cave(item, option,name)
+            cave(item, option, name)
 
             break
 
 
 def play_again(name):
 
-    again = input("Would you like to play again?" + name + "(y/n)").lower()
+    again = input("Would you like to play again?" + name + "(yes/no)").lower()
 
-    if again == "y":
+    if again == "yes":
 
         print_pause("\n\n\nExcellent! Restarting the game ...\n\n\n")
 
-        play_game()
+        play_game(name)
 
-    elif again == "n":
+    elif again == "no":
 
-        print_pause("\n\n\nThanks for playing! See you next time. " + name +"!" "\n\n\n")
-
+        print_pause("\n\n\nThanks for playing! See you next time. "
+                    + name + "!" "\n\n\n")
     else:
 
         play_again(name)
@@ -189,9 +190,9 @@ def play_game(name):
 
                             "Father McGruder"])
 
-    intro(item, option,name)
+    intro(item, option, name)
 
-    field(item, option,name)
+    field(item, option, name)
 
 
 play_game(name)
